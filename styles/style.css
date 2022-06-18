@@ -1,0 +1,161 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: hsl(0deg, 100%, 74%);
+  background-image: url("../images/bg-intro-desktop.png");
+  background-size: contain;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex > * + * {
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2em 2.2em 0.7em;
+  border-radius: 8px;
+  box-shadow: -1px 7px 3px -2px rgba(0, 0, 0, 0.24);
+}
+form > input {
+  padding: 0.7em 2em;
+}
+form > p {
+  font-size: 7px;
+  text-align: center;
+}
+
+form > * + * {
+  margin-top: 20px;
+}
+
+.ct {
+  padding-top: 8em;
+  padding-right: 2em;
+}
+.ct > * + * {
+  margin-top: 2rem;
+}
+.ct > h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  line-height: 1.2;
+}
+.ct > p {
+  color: white;
+}
+
+.try {
+  background-color: hsl(248deg, 32%, 49%);
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: -1px 7px 3px -2px rgba(0, 0, 0, 0.24);
+}/*# sourceMappingURL=style.css.map */
