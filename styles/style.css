@@ -139,6 +139,81 @@ form > p a {
   font-weight: 600;
 }
 
+.er:required:invalid {
+  background: url("../images/icon-error.svg");
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  outline: 2px solid hsl(0deg, 100%, 74%);
+}
+.er:required:invalid::-moz-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+.er:required:invalid:-ms-input-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+.er:required:invalid::placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+
+.pa:required:invalid {
+  background: url("../images/icon-error.svg");
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  outline: 2px solid hsl(0deg, 100%, 74%);
+}
+.pa:required:invalid::-moz-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+.pa:required:invalid:-ms-input-placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+.pa:required:invalid::placeholder {
+  color: hsl(0deg, 100%, 74%);
+}
+
+form.er:-moz-placeholder-shown:empty, form.pa:-moz-placeholder-shown:empty {
+  outline: 2px solid hsl(246deg, 25%, 77%);
+}
+
+form.er:-ms-input-placeholder:empty, form.pa:-ms-input-placeholder:empty {
+  outline: 2px solid hsl(246deg, 25%, 77%);
+}
+
+form.er:placeholder-shown:empty, form.pa:placeholder-shown:empty {
+  outline: 2px solid hsl(246deg, 25%, 77%);
+}
+form.er:placeholder-shown:empty::-moz-placeholder, form.pa:placeholder-shown:empty::-moz-placeholder {
+  color: gray;
+}
+form.er:placeholder-shown:empty:-ms-input-placeholder, form.pa:placeholder-shown:empty:-ms-input-placeholder {
+  color: gray;
+}
+form.er:-moz-placeholder-shown:empty::placeholder, form.pa:-moz-placeholder-shown:empty::placeholder {
+  color: gray;
+}
+form.er:-ms-input-placeholder:empty::placeholder, form.pa:-ms-input-placeholder:empty::placeholder {
+  color: gray;
+}
+form.er:placeholder-shown:empty::placeholder, form.pa:placeholder-shown:empty::placeholder {
+  color: gray;
+}
+
+.pa:valid {
+  background-color: white;
+}
+
+.pa::after {
+  content: "This field is required";
+  color: hsl(0deg, 100%, 74%);
+  font-size: 1.2em;
+}
+
+[data-erro]::after {
+  content: attr(data-erro);
+}
+
 form > * + * {
   margin-top: 20px;
 }
@@ -162,6 +237,7 @@ form > * + * {
 }
 
 .cta {
+  padding: 1em;
   background-color: hsl(154deg, 59%, 51%);
   border: none;
   cursor: pointer;

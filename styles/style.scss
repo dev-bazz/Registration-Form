@@ -56,7 +56,57 @@ box-shadow: -1px 7px 3px -2px rgba(0,0,0,0.24);
             font-weight: 600;
         }
     }
+    
+  
 }
+
+
+.er:required:invalid {
+    background: url('../images/icon-error.svg');
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    outline: 2px solid $Red;
+    &::placeholder{
+        color: $Red;
+    }
+}
+.pa:required:invalid {
+    background: url('../images/icon-error.svg');
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    outline: 2px solid $Red;
+    &::placeholder{
+        color: $Red;
+    }
+}
+
+form.er:placeholder-shown:empty, form.pa:placeholder-shown:empty{
+    outline: 2px solid $Grayish-Blue;
+    &::placeholder{
+        color: gray;
+    }
+}
+
+.pa:valid{
+    background-color: white;
+}
+
+.pa::after{
+    content: 'This field is required';
+    color: $Red;
+    font-size: 1.2em;
+   
+}
+
+[data-erro]::after{
+    content: attr(data-erro);
+}
+
+
+
+
 form> * + *{
     margin-top: 20px;
 }
@@ -79,6 +129,7 @@ form> * + *{
     }
 }
 .cta{
+    padding: 1em;
     background-color: $Green;
     border: none;
     cursor: pointer;
