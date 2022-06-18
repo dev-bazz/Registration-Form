@@ -102,6 +102,13 @@ box-shadow: -1px 7px 3px -2px rgba(0,0,0,0.24);
 }
 
 
+
+
+
+
+
+
+// Media Queries
 @media (max-width: 768px){
     :root{
         font-size: 14px;
@@ -120,7 +127,31 @@ box-shadow: -1px 7px 3px -2px rgba(0,0,0,0.24);
         }
     }
     .try{
-        margin-top: 1em;
+        margin-top: 5em;
+    }
+    
+    
+}
+
+@media (max-width: 390px){
+    :root{
+        font-size: 10px;
+    }
+    main{
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 400px;
+        align-items: center;
+        justify-content: center;
+    }
+    .ct{
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+    }
+    .try{
+        margin-top: 5em;
     }
     
     
