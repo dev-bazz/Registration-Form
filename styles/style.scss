@@ -32,6 +32,7 @@ main{
     }
 }
 form{
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -56,12 +57,36 @@ box-shadow: -1px 7px 3px -2px rgba(0,0,0,0.24);
             font-weight: 600;
         }
     }
-    
+    .solved{
+        width: 100%;
+        padding: .7em 2em;
+       border: 1px solid $Grayish-Blue;
+        &:focus{
+        outline: 1px solid $Dark-Blue;
+        }
+    }
   
+}
+.hi{
+    position: relative;
+}
+.error{
+    display: none;
+    position: absolute;
+}
+
+.er:focus-within:invalid:required ~ .error{
+    display: block;
+    color: red;
+    font-size: .5em;
+    margin-top: .2em;
+    right: 0;
+    margin-left: auto;
+
 }
 
 
-.er:required:invalid {
+.er:focus-within:required:invalid {
     background: url('../images/icon-error.svg');
     background-size: 1em;
     background-repeat: no-repeat;
@@ -71,7 +96,7 @@ box-shadow: -1px 7px 3px -2px rgba(0,0,0,0.24);
         color: $Red;
     }
 }
-.pa:required:invalid {
+.pa:focus-within:invalid:required {
     background: url('../images/icon-error.svg');
     background-size: 1em;
     background-repeat: no-repeat;
@@ -100,9 +125,7 @@ form.er:placeholder-shown:empty, form.pa:placeholder-shown:empty{
    
 }
 
-[data-erro]::after{
-    content: attr(data-erro);
-}
+
 
 
 
@@ -110,6 +133,8 @@ form.er:placeholder-shown:empty, form.pa:placeholder-shown:empty{
 form> * + *{
     margin-top: 20px;
 }
+
+
 .ct{
     padding-top: 8em;
     
@@ -180,6 +205,8 @@ font-weight: 600;
     }
     .ct{
         text-align: center;
+        padding-right: 0;
+        text-align: center;
         h1{
             text-align: center;
         }
@@ -203,6 +230,9 @@ font-weight: 600;
         justify-content: center;
     }
     .ct{
+        text-align: center;
+        text-align: center;
+        padding-right: 0;
         text-align: center;
         h1{
             text-align: center;

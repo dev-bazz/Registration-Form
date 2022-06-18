@@ -114,6 +114,7 @@ main {
 }
 
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -138,38 +139,64 @@ form > p a {
   color: hsl(0deg, 100%, 74%);
   font-weight: 600;
 }
+form .solved {
+  width: 100%;
+  padding: 0.7em 2em;
+  border: 1px solid hsl(246deg, 25%, 77%);
+}
+form .solved:focus {
+  outline: 1px solid hsl(249deg, 10%, 26%);
+}
 
-.er:required:invalid {
+.hi {
+  position: relative;
+}
+
+.error {
+  display: none;
+  position: absolute;
+}
+
+.er:focus-within:invalid:required ~ .error {
+  display: block;
+  color: red;
+  font-size: 0.5em;
+  margin-top: 0.2em;
+  right: 0;
+  margin-left: auto;
+}
+
+.er:focus-within:required:invalid {
   background: url("../images/icon-error.svg");
   background-size: 1em;
   background-repeat: no-repeat;
   background-position: 90% center;
   outline: 2px solid hsl(0deg, 100%, 74%);
 }
-.er:required:invalid::-moz-placeholder {
+.er:focus-within:required:invalid::-moz-placeholder {
   color: hsl(0deg, 100%, 74%);
 }
-.er:required:invalid:-ms-input-placeholder {
+.er:focus-within:required:invalid:-ms-input-placeholder {
   color: hsl(0deg, 100%, 74%);
 }
-.er:required:invalid::placeholder {
+.er:focus-within:required:invalid::placeholder {
   color: hsl(0deg, 100%, 74%);
 }
 
-.pa:required:invalid {
+.pa:focus-within:invalid:required {
   background: url("../images/icon-error.svg");
   background-size: 1em;
   background-repeat: no-repeat;
   background-position: 90% center;
   outline: 2px solid hsl(0deg, 100%, 74%);
 }
-.pa:required:invalid::-moz-placeholder {
+.pa:focus-within:invalid:required::-moz-placeholder {
   color: hsl(0deg, 100%, 74%);
 }
-.pa:required:invalid:-ms-input-placeholder {
+.pa:focus-within:invalid:required:-ms-input-placeholder {
   color: hsl(0deg, 100%, 74%);
 }
-.pa:required:invalid::placeholder {
+.pa:focus-within:invalid:required::placeholder {
   color: hsl(0deg, 100%, 74%);
 }
 
@@ -208,10 +235,6 @@ form.er:placeholder-shown:empty::placeholder, form.pa:placeholder-shown:empty::p
   content: "This field is required";
   color: hsl(0deg, 100%, 74%);
   font-size: 1.2em;
-}
-
-[data-erro]::after {
-  content: attr(data-erro);
 }
 
 form > * + * {
@@ -279,6 +302,8 @@ form > * + * {
 
   .ct {
     text-align: center;
+    padding-right: 0;
+    text-align: center;
   }
   .ct h1 {
     text-align: center;
@@ -302,6 +327,9 @@ form > * + * {
   }
 
   .ct {
+    text-align: center;
+    text-align: center;
+    padding-right: 0;
     text-align: center;
   }
   .ct h1 {
