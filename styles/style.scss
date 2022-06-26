@@ -244,3 +244,29 @@ font-weight: 600;
     
     
 }
+
+@media (max-width:300px) {
+    :root{
+        font-size: 6px;
+    }
+    main{
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+    .ct{
+        text-align: center;
+        text-align: center;
+        padding-right: 0;
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+    }
+    .try{
+        margin-top: 5em;
+    }
+    
+}
